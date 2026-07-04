@@ -11,19 +11,83 @@ header {
     padding: 20px;
     text-align: center;
 }
+
+/* Yêu cầu 4: Thay đổi phần tử nav sử dụng inline-block và rộng xấp xỉ 80% */
 nav {
     background-color: #2b6cb0;
     padding: 12px;
     text-align: center;
+    display: inline-block;
+    width: 80%;
+    margin: 0 auto;
 }
+
+/* Yêu cầu 3: Nhận xét (comment) ẩn kiểu dáng cũ của phần tử li */
+/* li {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+} 
+*/
+
+/* Thêm định dạng cơ bản cho li mới để menu không bị vỡ */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Yêu cầu 5: Sử dụng bộ chọn hậu duệ chỉ tạo kiểu cho hình ảnh trong nav rộng 10% */
+nav img {
+    width: 10%;
+    height: auto;
+}
+
 main {
     background-color: #ffffff;
     font-size: 18px;
     padding: 30px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
     border-radius: 8px;
 }
+
+/* Yêu cầu 6 & 8: Tạo kiểu lớp grid sử dụng lưới 2 cột (mỗi cột ~40%), thêm thuộc tính căn chỉnh */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around; /* Căn đều khoảng cách */
+    align-items: center;          /* Căn giữa theo chiều dọc */
+    row-gap: 20px;                 /* Khoảng cách giữa các hàng */
+    margin-bottom: 40px;
+}
+
+/* Yêu cầu 7: Chỉ tạo kiểu cho hình ảnh trong lớp grid rộng 100% */
+.grid img {
+    width: 100%;
+    height: auto;
+}
+
+/* Yêu cầu 9: Tạo kiểu lớp flex sử dụng flex-wrap và justify-content */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.flex div {
+    background-color: #e2e8f0;
+    padding: 20px;
+    border-radius: 4px;
+    flex: 1 1 25%;
+    text-align: center;
+}
+
 footer {
     background-color: #2d3748;
     color: #ffffff;
@@ -31,11 +95,7 @@ footer {
     text-align: center;
     font-size: 14px;
 }
-li {
-    display: inline-block;
-    width: 120px;
-    text-align: center;
-}
+
 h1 {
     text-align: center;
     font-family: 'Georgia', serif;
@@ -51,6 +111,17 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 }
-nav a:hover {
-    text-decoration: underline;
+
+/* CSS bổ sung để ẩn liên kết Skip to main content đi, chỉ hiện khi nhấn Tab (đạt chuẩn WAVE) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #bf55ec;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
 }

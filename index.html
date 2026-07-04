@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Chuyển đến Nội dung chính</a>
+
     <header>
         <h1>Trang Chủ Của Tôi</h1>
     </header>
@@ -16,8 +18,20 @@
             <li><a href="contact.html">Liên hệ</a></li>
         </ul>
     </nav>
-    <main>
-        <p>Chào mừng bạn đến với trang web đầu tiên của tôi. Đây là nội dung chính của trang chủ, nơi áp dụng các quy tắc định dạng về kích thước chữ lớn và khoảng cách dòng thông thoáng.</p>
+    <main id="main">
+        <div class="grid">
+            <div>
+                <p>Chào mừng bạn đến với trang web. Đây là nội dung cột thứ nhất sử dụng hệ thống hiển thị Grid.</p>
+            </div>
+            <div>
+                <p>Đây là cột thứ hai của lưới. Hệ thống Grid giúp chia bố cục hai bên cực kỳ cân đối.</p>
+            </div>
+        </div>
+        <div class="flex">
+            <div>Khối Flex 1</div>
+            <div>Khối Flex 2</div>
+            <div>Khối Flex 3</div>
+        </div>
     </main>
     <footer>
         <p>© 2026 Bản quyền thuộc về khóa học Intro CSS.</p>
